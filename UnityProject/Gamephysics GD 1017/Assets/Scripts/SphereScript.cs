@@ -57,7 +57,7 @@ public class SphereScript : MonoBehaviour
     private void ApplyMovement()
     {
         Vector3 PullVector = (player.transform.position - transform.position).normalized * CalculateGravitationForce();
-        Debug.Log($"pullVector: {PullVector}");
+        //Debug.Log($"pullVector: {PullVector}");
         switch (currentMoveState)
         {
             case CubeMovement.awayFromPlayer:
@@ -75,7 +75,7 @@ public class SphereScript : MonoBehaviour
     }
     private float CalculateGravitationForce()
     {
-        Debug.Log($"GravityForce: {((gravitationConstant * Mass * massPlayer * earthSimulationMultiplier) / (player.transform.position - transform.position).magnitude) * pullForce}");
+        //Debug.Log($"GravityForce: {((gravitationConstant * Mass * massPlayer * earthSimulationMultiplier) / (player.transform.position - transform.position).magnitude) * pullForce}");
         return ((gravitationConstant * Mass * massPlayer * earthSimulationMultiplier) / (player.transform.position - transform.position).magnitude) * pullForce;
     }
 
